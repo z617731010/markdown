@@ -1,25 +1,5 @@
 
-<font size=6>**<center> 本地NFS实现持久化存储 </center>**</font>
-
-<font size=5>**目录**</font>
-
-* [一.	搭建NFS服务端](#一搭建nfs服务端)
-    * [1.	在master端安装NFS](#1在master端安装nfs)
-    * [2.	编辑exports文件，添加从机](#2编辑exports文件添加从机)
-    * [3.	让修改过的配置文件生效](#3让修改过的配置文件生效)
-    * [4. 启动master的NFS服务](#4-启动master的nfs服务)
-        * [1）. 先为rpcbind和nfs做开机启动：](#1-先为rpcbind和nfs做开机启动)
-		* [2）. 通过查看service列中是否有nfs服务来确认NFS是否启动](#2-通过查看service列中是否有nfs服务来确认nfs是否启动)
-		* [3）. 查看可挂载目录及可连接的IP](#3-查看可挂载目录及可连接的ip)
-* [二.	配置NFS客户端](#二配置nfs客户端)
-	* [1.	安装nfs，并启动服务。在node节点上安装](#1安装nfs并启动服务-在node节点上安装)
-* [三.	配置k8s的mysql持久化存储](#三配置k8s的mysql持久化存储)
-	* [1.	创建存储类 StorageClass](#1创建存储类-storageclass)
-	* [2.	创建持续卷PV(PersistentVolume)](#2创建持续卷pvpersistentvolume)
-	* [3.	创建PersistentVolumeClaims](#3创建persistentvolumeclaims)
-	* [4. 创建mysql持久化存储](#4-创建mysql持久化存储)
-		* [1）创建卷volumes，指定persistentVolumeClaim。](#1创建卷volumes指定persistentvolumeclaim)
-		* [2）创建volumeMounts，指定volumes的名字，并指定容器内要共享的目录](#2创建volumemounts指定volumes的名字并指定容器内要共享的目录)
+## <font size=6>**<center> 本地NFS实现持久化存储 </center>**</font>
 
 ### 一.	搭建NFS服务端
 #### 1.	在master端安装NFS
